@@ -1,0 +1,191 @@
+
+<html>
+   <head>
+      <style type="text/css">
+         .sikuli-code {
+            font-size: 20px;
+            font-family: "Osaka-mono", Monospace;
+            line-height: 1.5em;
+            display:table-cell;
+            white-space: pre-wrap;       /* css-3 */
+            white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+            white-space: -pre-wrap;      /* Opera 4-6 */
+            white-space: -o-pre-wrap;    /* Opera 7 */
+            word-wrap: break-word;       /* Internet Explorer 5.5+ */
+            width: 99%;   /* remove horizontal scroll-bar when viewing in IE7 */
+         }
+         .sikuli-code img {
+            vertical-align: middle;
+            margin: 2px;
+            border: 1px solid #ccc;
+            padding: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-box-shadow: 1px 1px 1px gray;
+            -webkit-box-shadow: 1px 1px 2px gray;
+         }
+         .kw {
+            color: blue;
+         }
+         .skw {
+            color: rgb(63, 127, 127);
+         }
+
+         .str {
+            color: rgb(128, 0, 0);
+         }
+
+         .dig {
+            color: rgb(128, 64, 0);
+         }
+
+         .cmt {
+            color: rgb(200, 0, 200);
+         }
+
+         h2 {
+            display: inline;
+            font-weight: normal;
+         }
+
+         .info {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            display: none;
+         }
+
+         a {
+            color: #9D2900;
+         }
+
+         body {
+            font-family: "Trebuchet MS", Arial, Sans-Serif;
+         }
+
+      </style>
+   </head>
+<body>
+<div class="info">
+<h2>sikulix.sikuli\sikulix.sikuli</h2> <a href="sikulix.sikuli\sikulix.zip">(Download this script)</a>
+</div>
+<pre class="sikuli-code">
+myApp = App(<span class="str">"chrome.app"</span>)
+<span class="kw">if</span> <span class="kw">not</span> myApp.window(): <span class="cmt"># chrome not open</span>
+    App.open(<span class="str">"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"</span>)
+    <span class="skw">wait</span>(<span class="dig">10</span>)
+myApp.focus()
+<span class="skw">wait</span>(<span class="dig">1</span>)
+
+
+<span class="skw">wait</span>(<img src="1392883544404.png" />, FOREVER)
+
+
+<span class="skw">click</span>(<img src="1392883741646.png" />)
+
+<span class="skw">type</span>(<span class="str">"http://10.112.18.28/testcases/symbol/BoxMarkerSymbol.html\n"</span>)
+
+<span class="skw">wait</span>(<img src="1392884154681.png" />, FOREVER)
+
+
+<span class="skw">click</span>(<img src="1392882778695.png" />)
+<span class="kw">if</span> exists(<img src="1392882825935.png" />):
+    <span class="kw">print</span>(<span class="str">"create box marker symbol success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"create box marker symbol fail!"</span>)
+
+<span class="skw">click</span>(<img src="1392884525302.png" />)
+<span class="kw">if</span> exists(<img src="1392884539217.png" />):
+    <span class="kw">print</span>(<span class="str">"create box marker symbol(json) success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"create box marker symbol(json) fail!"</span>)
+
+<span class="skw">doubleClick</span>(<img src="1392885884712.png" />)
+
+<span class="skw">type</span>(<span class="str">"55000"</span>)
+
+<span class="skw">click</span>(<img src="1392884721664.png" />)
+
+<span class="kw">if</span> exists(<img src="1392884749355.png" />):
+    <span class="kw">print</span>(<span class="str">"set extent width success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"set extent width fail!"</span>)
+<span class="skw">doubleClick</span>(<span class="skw">find</span>(<img src="1392885400212.png" />).right().<span class="skw">find</span>(<img src="1392885665897.png" />))
+<span class="skw">type</span>(<span class="str">"90000"</span>)
+
+<span class="skw">click</span>(<img src="1392884721664.png" />)
+
+<span class="kw">if</span> exists(<img src="1392884874286.png" />):
+    <span class="kw">print</span>(<span class="str">"set extent height success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"set extent height fail!"</span>)
+<span class="skw">doubleClick</span>(<span class="skw">find</span>(<img src="1392885422517.png" />).right().<span class="skw">find</span>(<img src="1392885665897.png" />))
+<span class="skw">type</span>(<span class="str">"500000"</span>)
+
+<span class="skw">click</span>(<img src="1392884721664.png" />)
+
+<span class="kw">if</span> exists(<img src="1392884956412.png" />):
+    <span class="kw">print</span>(<span class="str">"set extent depth success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"set extent depth fail!"</span>)
+
+<span class="skw">click</span>(<img src="1392884996587.png" />)
+
+<span class="kw">if</span> exists(<img src="1392885018993.png" />):
+    <span class="kw">print</span>(<span class="str">"set tilt + 30 success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"set tilt + 30 fail!"</span>)
+
+<span class="skw">click</span>(<img src="1392885066449.png" />)
+<span class="skw">click</span>(<img src="1392885066449.png" />)
+
+<span class="kw">if</span> exists(<img src="1392885097714.png" />):
+    <span class="kw">print</span>(<span class="str">"set tilt - 30 success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"set tilt - 30 fail!"</span>)
+
+<span class="skw">doubleClick</span>(<img src="1392885160730.png" />)
+<span class="skw">type</span>(<span class="str">"145"</span>)
+<span class="skw">click</span>(<img src="1392885184156.png" />)
+<span class="kw">if</span> exists(<img src="1392885212829.png" />):
+    <span class="kw">print</span>(<span class="str">"set tilt  success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"set tilt fail!"</span>)
+
+<span class="skw">click</span>(<img src="1392886744095.png" />)
+<span class="skw">click</span>(<img src="1392886744095.png" />)
+<span class="skw">click</span>(<img src="1392886744095.png" />)
+<span class="kw">if</span> exists(<img src="1392886801194.png" />):
+    <span class="kw">print</span>(<span class="str">"set heading + 30 success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"set heading + 30 fail!"</span>)
+
+<span class="skw">click</span>(<img src="1392886838690.png" />)
+<span class="skw">click</span>(<img src="1392886838690.png" />)
+<span class="kw">if</span> exists(<img src="1392886861619.png" />):
+    <span class="kw">print</span>(<span class="str">"set heading - 30 success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"set heading - 30 fail!"</span>)
+
+
+<span class="skw">doubleClick</span>(<span class="skw">find</span>(<img src="1392887108781.png" />).left().<span class="skw">find</span>(<img src="1392887121837.png" />))
+<span class="skw">type</span>(<span class="str">"90"</span>)
+<span class="skw">click</span>(<img src="1392887150799.png" />)
+
+<span class="kw">if</span> exists(<img src="1392887181313.png" />):
+    <span class="kw">print</span>(<span class="str">"set heading success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"set heading fail!"</span>)
+
+<span class="skw">dragDrop</span>(<img src="1392949672422.png" />,<img src="1392949687298.png" /> )
+
+<span class="skw">click</span>(<img src="1392887213432.png" />)
+<span class="skw">click</span>(<img src="1392887213432.png" />)
+<span class="skw">click</span>(<img src="1392887213432.png" />)
+<span class="kw">if</span> exists(<img src="1392887260658.png" />):
+    <span class="kw">print</span>(<span class="str">"set up offset success!"</span>)
+<span class="kw">else</span>:
+    <span class="kw">print</span>(<span class="str">"set up offset fail!"</span>)
+</pre>
+</body>
+</html>
